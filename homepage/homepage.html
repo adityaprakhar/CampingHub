@@ -1,0 +1,964 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <style>
+  
+	body{
+		background-color:#00000005;
+		
+	}
+  
+	/* Nav bar CSS*/
+	
+	.navbar{
+			
+	}
+	
+	/* background-color:#ddf0f8; */
+	
+	.navbar-nav{
+		padding:20px;
+	}
+	
+	.nav-link{
+		text-align:center;
+		width:150px;
+		height:50px;
+		border:1px solid #00000012;
+		color:#4552ed;
+		box-shadow: 0 0 7px #4552ed4f;
+		font-weight:500;
+		font-size:20px;
+	}
+	
+	.nav-link:hover{
+		background-color:#00000009;  
+		border:none;
+	}
+	
+	
+	
+	
+	/*Search Bar Area CSS */
+	
+	.search-bar-part{ 
+		height:400px;
+		text-align:center;
+		background-image:url("images/search-image6edited.jpg");
+		background-size:cover;
+		background-repeat:no-repeat;
+		background-position:center;
+		position:relative;
+	}
+  
+	.search-bar-group{
+		color:black;
+		position:absolute;
+		top:50%;
+		left:50%;
+		transform:translate(-50%,-50%);
+		padding:40px;
+		border-radius:100px;
+		width:50%;
+	}
+	
+	.search-heading{
+		display:inline-block;
+		padding:2px 20px;
+		margin-bottom:0.8em;
+		background-color:#00adffad;
+		margin-right:7%;
+	}
+	
+	input[type="text"]{
+		width: 70%;
+		line-height: 48px;
+		border: 2px solid #0c34f84d;
+		padding-left: 20px;
+	}
+	
+	button[type="submit"] {
+	
+		height:48px;
+		position:relative;
+		left:-50px;
+		top:5px;
+		background-color:white;
+		border:0px;
+	}
+	
+	.fa-search {
+			
+		color:#3582f6;
+		text-size:40px;
+	}
+	
+	.buttonBelowSearchBar{
+		background-color:#00adfffc;
+		border:0px;
+		
+		
+	}
+
+	
+	button[type="submit"]:focus,input[type="text"]:focus {
+		box-shadow:0px 0px 15px #0c34f84d; 
+		outline: none;
+	}
+	
+	.fa-map-marker{
+		font-size:15px;
+		color:white;
+	}
+	
+	
+	/* Headings CSS */
+	
+	.heading1{
+		padding: 22px 30px;
+		margin: 15px 0px 0px;
+		text-align:center;
+		text-decoration:underline;
+		/* background-color:#0ae9ca26; */
+	
+		
+	}
+	
+	.heading2{
+		padding: 14px 10px;
+		margin: 15px 0px;
+		border: 3px solid #ddf0f8;
+		box-shadow: 0 0 20px #ddf0f;
+		text-align:center;
+	} 
+	
+	
+	
+	/* Gallary CSS */
+	
+	.thumbnail {
+		border: 2px solid #9c9d9d;
+		padding:10px;
+	}
+	
+	.thumbnail:hover {
+		box-shadow: 0 0 10px #9c9d9d;
+	}
+	
+	.image {
+		border: 1px solid black;
+		height:250px; 
+	}
+	
+	.image2{
+		border: 1px solid black;
+		height:200px; 
+	}
+
+	.image img,.image2 img {
+		width:100%; 
+		height:100%;
+	}
+	
+	.fa-star,.fa-star-half-full,.fa-star-o{
+		color:orange;
+	}
+		
+	.description {
+		padding:9px 9px 4px;
+	}
+	
+	
+	
+	
+	
+	
+	/* Footer CSS*/
+	
+	.footer{
+		padding:50px 50px 50px 100px;
+		background-color:#ddf0f8;
+	}
+	
+	.footer_list1 ul li,.footer_list2 ul li{
+		width:300px;
+		height:40px;
+		padding:8px;
+	}
+	
+	.hoverClass:hover{
+		background-color:#27ff0047;
+	}
+	
+  </style>
+</head>
+
+
+<body>
+
+<div class="container-fluid" >
+
+	<!-- This is navbar which will be present at the top-->
+		
+		<nav class="navbar navbar-expand-sm">
+		
+		  <ul class="navbar-nav">
+			<li class="nav-item">
+				<img src="images/camping_logo.jpg">&nbsp &nbsp 
+			</li>
+			<li class="nav-item">
+				<h1>Camping Hub</h1>
+			</li>
+		  </ul>
+		  <ul class="navbar-nav ml-auto">
+			<li class="nav-item ">
+			  <a class="nav-link" href="#">HOME</a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link" href="#">ABOUT</a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link" href="#">CITIES</a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link" href="#">BLOG</a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link" href="#"><span class="fa fa-sign-in"> </span> SIGN IN</a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link" href="#"><span class="fa fa-user-plus"> </span> REGISTER</a>
+			</li>
+		  </ul>
+		</nav>
+		
+	<!-- End of navbar/header-->
+	
+	<!-- Search bar  -->
+	<div class="search-bar-part" >
+	
+		<div class="search-bar-group">
+			<h2 class="search-heading">I Wanna Go Camping Near</h2>
+			<br>
+			<input type="text" placeholder="Search by city">
+			<button type="submit"><span class="fa fa-2x fa-search"></span></button>
+			<br><br>
+			<!-- <button class="buttonBelowSearchBar">Find Camp Sites Near Me <span class="fa fa-map-marker"></span></button> -->
+		</div>
+	</div>
+	
+	<!-- End of Search bar -->
+	
+	<!-- Popular Cities -->
+	
+	
+	<div class="heading1">
+		<h1>Popular Locations</h1>
+	</div>
+	
+	
+	
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-4">
+				<div class="thumbnail">
+					<div class="image" id="image1" >
+						<img src="images/popularLocations/1.jpg" alt="popularLocation1">
+					</div>
+					<div class="description">
+						
+						<table >
+						<tr>
+							<td>Location </td>
+							<td>&nbsp :&nbsp &nbsp </td>
+							<td>Kandhar, LodiNagar Pune</td>
+							<td>
+								
+							</td>
+						</tr>
+						<tr>
+							<td>Name </td>
+							<td>&nbsp :&nbsp &nbsp </td>
+							<td>The Lodi Camp</td>
+						</tr>
+						<tr>
+							<td>Rating</td>
+							<td>&nbsp :&nbsp &nbsp </td>
+							<td>
+								<span class="fa fa-star"></span>
+								<span class="fa fa-star"></span>
+								<span class="fa fa-star"></span>
+								<span class="fa fa-star"></span>
+								<span class="fa fa-star-half-full"></span>
+							</td>
+						</tr>
+						
+						</table>
+						 
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="thumbnail">
+					<div class="image" id="image2"  >
+						<img src="images/popularLocations/2.jpg" alt="popularLocation2">
+					</div>
+					<div class="description">
+						<table>
+						<tr>
+							<td>Location </td>
+							<td>&nbsp :&nbsp &nbsp</td>
+							<td>Kandhar, LodiNagar Pune</td>
+						</tr>
+						<tr>
+							<td>Name </td>
+							<td>&nbsp :&nbsp &nbsp</td>
+							<td>The Lodi Camp</td>
+						</tr>
+						<tr>
+							<td>Rating</td>
+							<td>&nbsp :&nbsp &nbsp </td>
+							<td>
+								<span class="fa fa-star"></span>
+								<span class="fa fa-star"></span>
+								<span class="fa fa-star"></span>
+								<span class="fa fa-star"></span>
+								<span class="fa fa-star-half-full"></span>
+							</td>
+						</tr>
+						
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="thumbnail">
+					<div class="image" id="image4"  >
+						<img src="images/popularLocations/3.jpg" alt="popularLocation3">
+					</div>
+					<div class="description">
+						<table>
+						<tr>
+							<td>Location </td>
+							<td>&nbsp :&nbsp &nbsp</td>
+							<td>Kandhar, LodiNagar Pune</td>
+						</tr>
+						<tr>
+							<td>Name </td>
+							<td>&nbsp :&nbsp &nbsp</td>
+							<td>The Lodi Camp</td>
+						</tr>
+						<tr>
+							<td>Rating</td>
+							<td>&nbsp :&nbsp &nbsp </td>
+							<td>
+								<span class="fa fa-star"></span>
+								<span class="fa fa-star"></span>
+								<span class="fa fa-star"></span>
+								<span class="fa fa-star"></span>
+								<span class="fa fa-star"></span>
+							</td>
+						</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		<br><br>
+			<div class="row">
+			<div class="col-md-4">
+				<div class="thumbnail">
+					<div class="image" id="image3" >
+						<img src="images/popularLocations/4.jpg" alt="poularLocation4">
+					</div>
+					<div class="description">
+						<table>
+						<tr>
+							<td>Location </td>
+							<td>&nbsp :&nbsp &nbsp</td>
+							<td>Kandhar, LodiNagar Pune</td>
+						</tr>
+						<tr>
+							<td>Name </td>
+							<td>&nbsp :&nbsp &nbsp</td>
+							<td>The Lodi Camp</td>
+						</tr>
+						<tr>
+							<td>Rating</td>
+							<td>&nbsp :&nbsp &nbsp </td>
+							<td>
+								<span class="fa fa-star"></span>
+								<span class="fa fa-star"></span>
+								<span class="fa fa-star"></span>
+								<span class="fa fa-star"></span>
+								<span class="fa fa-star-o"></span>
+							</td>
+						</tr>
+						
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="thumbnail">
+					<div class="image" id="image4"  >
+						<img src="images/popularLocations/5.jpg" alt="popularLocation5">
+					</div>
+					<div class="description">
+						<table>
+						<tr>
+							<td>Location </td>
+							<td>&nbsp :&nbsp &nbsp</td>
+							<td>Kandhar, LodiNagar Pune</td>
+						</tr>
+						<tr>
+							<td>Name </td>
+							<td>&nbsp :&nbsp &nbsp</td>
+							<td>The Lodi Camp</td>
+						</tr>
+						<tr>
+							<td>Rating</td>
+							<td>&nbsp :&nbsp &nbsp </td>
+							<td>
+								<span class="fa fa-star"></span>
+								<span class="fa fa-star"></span>
+								<span class="fa fa-star"></span>
+								<span class="fa fa-star"></span>
+								<span class="fa fa-star-half-full"></span>
+							</td>
+						</tr>
+						
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="thumbnail">
+				
+					<div class="image" id="image4"  >
+						<img src="images/popularLocations/6.jpg" alt="popularLocation6">
+					</div>
+					
+					<div class="description">
+						<table>
+						<tr>
+							<td>Location </td>
+							<td>&nbsp :&nbsp &nbsp</td>
+							<td>Kandhar, LodiNagar Pune</td>
+						</tr>
+						<tr>
+							<td>Name </td>
+							<td>&nbsp :&nbsp &nbsp</td>
+							<td>The Lodi Camp</td>
+						</tr>
+						<tr>
+							<td>Rating</td>
+							<td>&nbsp :&nbsp &nbsp </td>
+							<td>
+								<span class="fa fa-star"></span>
+								<span class="fa fa-star"></span>
+								<span class="fa fa-star"></span>
+								<span class="fa fa-star"></span>
+								<span class="fa fa-star-o"></span>
+							</td>
+						</tr>
+						
+						</table>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		
+	<!-- Finish Popular Locations -->
+	
+	<!-- Discover by Type Of Camping -->
+	
+	<br>
+	<div class="heading1">
+		<h2>Discover By Type Of Camping</h2>
+	</div>
+	
+	
+	<div class="heading2">
+	<h3> Beach Camps </h3>
+	</div>
+		
+		<div class="row">
+			<div class="col-md-3">
+				<div class="thumbnail">
+					<div class="image2">
+						<img src="images/discoverByType/beach1.jpg" alt="one">
+					</div>
+					<div class="description">
+						
+						<table>
+						<tr>
+							<td>Location </td>
+							<td style="vertical-align: middle;">&nbsp :&nbsp &nbsp</td>
+							<td>Kandhar, LodiNagar Pune</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>Name </td>
+							<td>&nbsp :&nbsp &nbsp</td>
+							<td>The Lodi Camp</td>
+						</tr>
+						<tr>
+							<td>Rating</td>
+							<td>&nbsp :&nbsp &nbsp </td>
+							<td>
+								<span class="fa fa-star"></span>
+								<span class="fa fa-star"></span>
+								<span class="fa fa-star"></span>
+								<span class="fa fa-star"></span>
+								<span class="fa fa-star-half-full"></span>
+							</td>
+						</tr>
+						</table>
+						 
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="thumbnail">
+					<div class="image2">
+						<img src="images/discoverByType/beach2.jpg" alt="two">
+					</div>
+					<div class="description">
+						<table>
+						<tr>
+							<td>Location </td>
+							<td>&nbsp :&nbsp &nbsp</td>
+							<td>Kandhar, LodiNagar Pune</td>
+						</tr>
+						<tr>
+							<td>Name </td>
+							<td>&nbsp :&nbsp &nbsp</td>
+							<td>The Lodi Camp</td>
+						</tr>
+						<tr>
+							<td>Rating</td>
+							<td>&nbsp :&nbsp &nbsp </td>
+							<td>
+								<span class="fa fa-star"></span>
+								<span class="fa fa-star"></span>
+								<span class="fa fa-star"></span>
+								<span class="fa fa-star-half-full"></span>
+								<span class="fa fa-star-o"></span>
+							</td>
+						</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="thumbnail">
+					<div class="image2">
+						<img src="images/discoverByType/beach3.jpg" alt="three">
+					</div>
+					<div class="description">
+						<table>
+						<tr>
+							<td>Location </td>
+							<td>&nbsp :&nbsp &nbsp</td>
+							<td>Kandhar, LodiNagar Pune</td>
+						</tr>
+						<tr>
+							<td>Name </td>
+							<td>&nbsp :&nbsp &nbsp</td>
+							<td>The Lodi Camp</td>
+						</tr>
+						<tr>
+							<td>Rating</td>
+							<td>&nbsp :&nbsp &nbsp </td>
+							<td>
+								<span class="fa fa-star"></span>
+								<span class="fa fa-star"></span>
+								<span class="fa fa-star"></span>
+								<span class="fa fa-star-o"></span>
+								<span class="fa fa-star-o"></span>
+							</td>
+						</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-md-3">
+				<div class="thumbnail">
+					<div class="image2" >
+						<img src="images/discoverByType/beach4.jpg" alt="four">
+					</div>
+					<div class="description">
+						<table>
+						<tr>
+							<td>Location </td>
+							<td>&nbsp :&nbsp &nbsp</td>
+							<td>Kandhar, LodiNagar Pune</td>
+						</tr>
+						<tr>
+							<td>Name </td>
+							<td>&nbsp :&nbsp &nbsp</td>
+							<td>The Lodi Camp</td>
+						</tr>
+						<tr>
+							<td>Rating</td>
+							<td>&nbsp :&nbsp &nbsp </td>
+							<td>
+								<span class="fa fa-star"></span>
+								<span class="fa fa-star"></span>
+								<span class="fa fa-star"></span>
+								<span class="fa fa-star"></span>
+								<span class="fa fa-star-half-full"></span>
+							</td>
+						</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		
+	
+	<div class="heading2">
+	<h3> Jungle Camps </h3>
+	</div>
+	
+	
+	
+	
+		<div class="row">
+			<div class="col-md-3">
+				<div class="thumbnail">
+					<div class="image2">
+						<img src="images/discoverByType/jungle1.jpg" alt="five">
+					</div>
+					<div class="description">
+						
+						<table>
+						<tr>
+							<td>Location </td>
+							<td style="vertical-align: middle;">&nbsp :&nbsp &nbsp</td>
+							<td>Kandhar, LodiNagar Pune</td>
+						</tr>
+						<tr>
+							<td>Name </td>
+							<td>&nbsp :&nbsp &nbsp</td>
+							<td>The Lodi Camp</td>
+						</tr>
+						<tr>
+							<td>Rating</td>
+							<td>&nbsp :&nbsp &nbsp </td>
+							<td>
+								<span class="fa fa-star"></span>
+								<span class="fa fa-star"></span>
+								<span class="fa fa-star"></span>
+								<span class="fa fa-star-half-full"></span>
+								<span class="fa fa-star-o"></span>
+							</td>
+						</tr>
+						</table>
+						 
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="thumbnail">
+					<div class="image2">
+						<img src="images/discoverByType/jungle2.jpg" alt="six">
+					</div>
+					<div class="description">
+						<table>
+						<tr>
+							<td>Location </td>
+							<td>&nbsp :&nbsp &nbsp</td>
+							<td>Kandhar, LodiNagar Pune</td>
+						</tr>
+						<tr>
+							<td>Name </td>
+							<td>&nbsp :&nbsp &nbsp</td>
+							<td>The Lodi Camp</td>
+						</tr>
+						<tr>
+							<td>Rating</td>
+							<td>&nbsp :&nbsp &nbsp </td>
+							<td>
+								<span class="fa fa-star"></span>
+								<span class="fa fa-star"></span>
+								<span class="fa fa-star"></span>
+								<span class="fa fa-star"></span>
+								<span class="fa fa-star-half-full"></span>
+							</td>
+						</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="thumbnail">
+					<div class="image2">
+						<img src="images/discoverByType/jungle3.jpg" alt="seven">
+					</div>
+					<div class="description">
+						<table>
+						<tr>
+							<td>Location </td>
+							<td>&nbsp :&nbsp &nbsp</td>
+							<td>Kandhar, LodiNagar Pune</td>
+						</tr>
+						<tr>
+							<td>Name </td>
+							<td>&nbsp :&nbsp &nbsp</td>
+							<td>The Lodi Camp</td>
+						</tr>
+						<tr>
+							<td>Rating</td>
+							<td>&nbsp :&nbsp &nbsp </td>
+							<td>
+								<span class="fa fa-star"></span>
+								<span class="fa fa-star"></span>
+								<span class="fa fa-star"></span>
+								<span class="fa fa-star-half-full"></span>
+								<span class="fa fa-star-o"></span>
+							</td>
+						</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-md-3">
+				<div class="thumbnail">
+					<div class="image2" >
+						<img src="images/discoverByType/jungle4.jpg" alt="eight">
+					</div>
+					<div class="description">
+						<table>
+						<tr>
+							<td>Location </td>
+							<td>&nbsp :&nbsp &nbsp</td>
+							<td>Kandhar, LodiNagar Pune</td>
+						</tr>
+						<tr>
+							<td>Name </td>
+							<td>&nbsp :&nbsp &nbsp</td>
+							<td>The Lodi Camp</td>
+						</tr>
+						<tr>
+							<td>Rating</td>
+							<td>&nbsp :&nbsp &nbsp </td>
+							<td>
+								<span class="fa fa-star"></span>
+								<span class="fa fa-star"></span>
+								<span class="fa fa-star"></span>
+								<span class="fa fa-star"></span>
+								<span class="fa fa-star-o"></span>
+							</td>
+						</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		
+		
+	
+	
+	<div class="heading2">
+	<h3> Mountain Camps </h3>
+	</div>
+	
+	
+	
+		<div class="row">
+			<div class="col-md-3">
+				<div class="thumbnail">
+					<div class="image2">
+						<img src="images/discoverByType/mountain1.jpg" alt="nine">
+					</div>
+					<div class="description">
+						
+						<table>
+						<tr>
+							<td>Location </td>
+							<td style="vertical-align: middle;">&nbsp :&nbsp &nbsp</td>
+							<td>Kandhar, LodiNagar Pune</td>
+						</tr>
+						<tr>
+							<td>Name </td>
+							<td>&nbsp :&nbsp &nbsp</td>
+							<td>The Lodi Camp</td>
+						</tr>
+						<tr>
+							<td>Rating</td>
+							<td>&nbsp :&nbsp &nbsp </td>
+							<td>
+								<span class="fa fa-star"></span>
+								<span class="fa fa-star"></span>
+								<span class="fa fa-star"></span>
+								<span class="fa fa-star"></span>
+								<span class="fa fa-star-o"></span>
+							</td>
+						</tr>
+						</table>
+						 
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="thumbnail">
+					<div class="image2">
+						<img src="images/discoverByType/mountain2.jpg" alt="ten">
+					</div>
+					<div class="description">
+						<table>
+						<tr>
+							<td>Location </td>
+							<td>&nbsp :&nbsp &nbsp</td>
+							<td>Kandhar, LodiNagar Pune</td>
+						</tr>
+						<tr>
+							<td>Name </td>
+							<td>&nbsp :&nbsp &nbsp</td>
+							<td>The Lodi Camp</td>
+						</tr>
+						<tr>
+							<td>Rating</td>
+							<td>&nbsp :&nbsp &nbsp </td>
+							<td>
+								<span class="fa fa-star"></span>
+								<span class="fa fa-star"></span>
+								<span class="fa fa-star"></span>
+								<span class="fa fa-star-half-full"></span>
+								<span class="fa fa-star-o"></span>
+							</td>
+						</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="thumbnail">
+					<div class="image2">
+						<img src="images/discoverByType/mountain3.jpg" alt="eleven">
+					</div>
+					<div class="description">
+						<table>
+						<tr>
+							<td>Location </td>
+							<td>&nbsp :&nbsp &nbsp</td>
+							<td>Kandhar, LodiNagar Pune</td>
+						</tr>
+						<tr>
+							<td>Name </td>
+							<td>&nbsp :&nbsp &nbsp</td>
+							<td>The Lodi Camp</td>
+						</tr>
+						<tr>
+							<td>Rating</td>
+							<td>&nbsp :&nbsp &nbsp </td>
+							<td>
+								<span class="fa fa-star"></span>
+								<span class="fa fa-star"></span>
+								<span class="fa fa-star"></span>
+								<span class="fa fa-star"></span>
+								<span class="fa fa-star-o"></span>
+							</td>
+						</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-md-3">
+				<div class="thumbnail">
+					<div class="image2" >
+						<img src="images/discoverByType/mountain4.jpg" alt="twelve">
+					</div>
+					<div class="description">
+						<table>
+						<tr>
+							<td>Location </td>
+							<td>&nbsp :&nbsp &nbsp</td>
+							<td>Kandhar, LodiNagar Pune</td>
+						</tr>
+						<tr>
+							<td>Name </td>
+							<td>&nbsp :&nbsp &nbsp</td>
+							<td>The Lodi Camp</td>
+						</tr>
+						<tr>
+							<td>Rating</td>
+							<td>&nbsp :&nbsp &nbsp </td>
+							<td>
+								<span class="fa fa-star"></span>
+								<span class="fa fa-star"></span>
+								<span class="fa fa-star"></span>
+								<span class="fa fa-star-o"></span>
+								<span class="fa fa-star-o"></span>
+							</td>
+						</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		
+	<!-- Finish Discover by Type Of Camping -->	
+	
+	<!-- Footer start-->
+	<br><br><br>
+	
+	<div class="row footer">
+		<div class="col-md-4">
+			<div class="footer_list1">
+				<h3>General</h3>
+				<hr>
+				<ul>
+					<li class="hoverClass">About Us</li>
+					<li class="hoverClass">Contact Us</li>
+					<li class="hoverClass">FAQ's</li>
+					<li class="hoverClass">Terms and Conditions</li>
+				</ul>
+			</div>
+		</div>
+		
+		<div class="col-md-4">
+			<div class="footer_list2">
+				<h3>Connect</h3>
+				<hr>
+				<ul>
+					<li class="hoverClass"><span class="fa fa-facebook">&nbsp &nbsp </span> Facebook</li>
+					<li class="hoverClass"><span class="fa fa-twitter">&nbsp &nbsp </span> Twitter</li>
+					<li class="hoverClass"><span class="fa fa-instagram">&nbsp &nbsp </span> Instagram</li>
+				</ul>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="footer_list3">
+				
+				<center><img src="images/camping_logo.jpg" alt="logo" >
+				<h3>Camping Hub</h3>
+				<p>We hope you liked the website!<br> Please keep visiting us.<br> We will be delighted to help you book for camping!</p>
+				</center>
+			</div>
+		</div>
+		
+	</div>
+
+</div>
+
+</body>
+</html>
