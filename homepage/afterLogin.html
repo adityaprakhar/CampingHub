@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>User Account</title>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  
+  <style>
+	 
+	body{
+		background-color:#00000005;
+		height:100%;
+	}
+	 	
+	navbar a, footer a{
+		color:black;
+	}
+	
+	navbar a:hover, footer a:hover{
+		color:black;
+		text-decoration:none;
+	}
+	
+	
+	/*                       Nav bar CSS                  */
+		
+	.navbar-nav{
+		padding:20px;
+	}
+	
+	.nav-item{
+		padding:0px 13px;
+		font-weight:700;
+	}
+	
+	
+	/*                  Search Bar in Nav CSS             */
+	
+	.nav-item input[type="text"]{  				 /* This is the search bar*/
+		
+		width: 260px;
+		line-height: 35px;
+		border: 2px solid #0c34f84d;
+		padding-left: 20px;
+	}
+				
+	.nav-item button[type="submit"] {			 /* This is the search button */
+	
+		height:35px;
+		width:30px;
+		position:relative;
+		left:-40px;
+		background-color:white;
+		border:0px;
+		margin-right:50px;
+	}
+	
+	.nav-item input[type="text"]:focus {
+		box-shadow:0px 0px 15px #0c34f84d; 
+		outline: none;
+	}
+	
+	.nav-item button[type="submit"]:focus{
+		outline:none;
+	}
+	
+	.fa-search{
+		color:orange;
+	}
+	
+	/*                       Main Section                 */
+	
+	.main{
+		margin:auto; 
+		width:85%; 
+	}
+	
+	.tab-content{
+		background-color:white;
+		padding:30px;
+		padding-bottom:200px;
+		text-align:center;
+		border-left: 1px solid #afebff;
+		border-right: 1px solid #afebff;
+	}
+		
+	.nav-tabs{
+		background-color:white;
+		padding:30px;
+		border-left: 1px solid #afebff;
+		border-right: 1px solid #afebff;
+	}
+	
+	.tab-pane h1{
+		margin-top:40px;
+		margin-bottom:70px;
+	}
+	
+	
+	/*                 Profile Tab CSS               */
+	
+	#profile form{
+		display:inline-block;
+		width:70%;
+	}
+	
+	#profile form input[type="submit"]{
+		width:35%;
+	}
+	
+	.profile-img{
+		width:130px;
+		height:130px;
+		border-radius:75px;
+		margin-bottom:40px;
+	}
+	
+	
+	
+	/*            Change Password Tab CSS           */
+	
+	#changePassword .row{
+		width:80%;
+		margin:auto;
+	}
+	#changePassword form{
+		width:80%;
+	}
+	
+	#changePassword .fa-unlock-alt{
+		color:#06913d;
+	}
+	#changePassword {
+		padding-bottom:100px;
+	}
+	
+	/*            Your Wishlist Tab CSS               */
+	
+	#yourWishlist h1{
+		margin-bottom:0px;
+	}
+	
+	.fa-heart{
+		color:red;
+	}
+	
+	#yourWishlist p{
+		font-size:18px;
+		margin-bottom:50px;
+		margin-top:20px;
+	}
+	
+	#yourWishlist .thumbnail {
+		box-shadow: 0 0 5px #9c9d9d;
+	}
+	
+	#yourWishlist .thumbnail:hover{
+		box-shadow: 0 0 15px #9c9d9d;
+	}
+	
+	#yourWishlist .image {
+		height:150px; 
+	}
+
+	#yourWishlist .image img {
+		width:100%; 
+		height:100%;
+	}
+
+	#yourWishlist .fa-star,.fa-star-half-full,.fa-star-o{
+		color:orange;
+	}
+		
+	#yourWishlist .description {
+		padding:20px 15px;
+	}
+	
+	#yourWishlist .row{
+		
+		width:80%;
+		margin:auto;
+		margin-bottom:50px;
+	}
+	
+	
+	
+	
+	
+	
+	
+	/*               Your Booking section               */
+	
+	.currentBookingDropDown, .completedTripsDropDown{
+		
+		width:100%;
+		background-color:inherit;
+		border:none;
+		border-bottom:1px solid orange;
+		text-align:left;
+		font-size:28px;
+		margin-bottom:35px;
+		margin-top:50px;
+	}
+	
+	.currentBookingDropDown:focus, .completedTripsDropDown:focus{
+		outline:none;
+	}
+	
+	#currentBooking, #completedTrips {
+		
+	}
+	
+	.booking{
+		width:100%;
+		background: linear-gradient( #afdbff,rgb(242 248 254));
+		border:1px solid skyblue;
+		outline:none;
+		margin: 20px 0px;
+	}
+	
+	.booking:hover{
+		outline:none;
+		border:none;
+	}
+	
+	.booking > div{
+		padding:30px;
+		line-height:40px;
+		font-size:16px;
+		text-align:left;
+		
+	}
+	
+	.booking > img{
+		height:150px;
+		width:220px;
+		padding-right:30px;
+	}
+	
+	.fa-star, .fa-star-half-alt{
+		color:orange;
+	}
+	
+	div[id^="bookingDetails"] div{
+		background-color:#f5fcfb;
+	}
+	
+	.otherDetailsTable{
+		width:50%;
+		text-align:left;
+	}
+	
+	.invoiceTable td, .otherDetailsTable td{
+		padding:10px;
+	}
+	.invoiceTable{
+		width:70%;
+		text-align:center;
+		border:1px solid black;
+	}
+	
+	
+	
+	
+	/*                      Footer CSS                     */
+	
+	.footer{
+		padding:50px 50px 50px 100px;
+		background-color:#ddf0f8;
+	}
+	
+	.footer li{
+		width:300px;
+		height:40px;
+		padding:8px;
+		list-style-type:none;
+	}
+	
+	.footer .list li:hover{
+		background-color:#27ff0047;
+	}
+	
+		
+	@media screen and (max-width:768px){
+	
+			.footer{
+				padding:50px 50px 50px 50px;
+			}
+	}
+	
+  </style>
+ 
+</head>
+<body>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		
+		<a class="navbar-brand" href="#"><img src="images/camping_logo.jpg"></a>
+		<a class="navbar-brand" href="#"><h1>Camping Hub</h1></a>
+		
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item">
+					<form class="form-inline my-2 my-lg-0">
+					  
+					  <input type="text" placeholder="Search by city">
+					  <button type="submit"><span class="fa fa-search"></span></button>
+					  <!--
+					  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+					  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+					  -->
+					</form>
+				</li>
+				<li>
+					
+				</li>
+				<li class="nav-item ">
+					<a class="nav-link" href="homepage.html" style="color:#4552ed;">HOME</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="aboutUs.html" style="color:#4552ed;">ABOUT</a>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" style="color:#4552ed;" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						CITIES
+					</a>
+					
+					<div class="dropdown-menu dropdown" aria-labelledby="navbarDropdown">
+					  <a class="dropdown-item" href="#">Uttar Pradesh</a>
+					   <div class="dropdown-divider"></div>
+					  <a class="dropdown-item" href="#">Lucknow</a>
+					  <a class="dropdown-item" href="#">Noida</a>
+					  <a class="dropdown-item" href="#">Meerut</a>
+					  <div class="dropdown-divider"></div>
+					  <a class="dropdown-item" href="#">Karnataka</a>
+					  <div class="dropdown-divider"></div>
+					  <a class="dropdown-item" href="#">Banglore</a>
+					  <a class="dropdown-item" href="#">Manglore</a>
+					   <a class="dropdown-item" href="#">Manipal</a>
+					</div>
+				</li>
+				<li class="nav-item" >
+				  <a class="nav-link" href="#" style="color:#4552ed;">BLOG</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" href="loginPage.html" style="color:#4552ed;"><span class="fa fa-sign-in"> </span> SIGN IN</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" href="registrationPage.html" style="color:#4552ed;"><span class="fa fa-user-plus"> </span> REGISTER</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+	<div class="container-fluid row main">
+			<div class="col-md-3">
+				<ul class="nav nav-tabs flex-column">
+					<li class="nav-item">
+						<a class="nav-link" href="#profile" data-toggle="tab"> Edit You Profile </a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#yourBookings" data-toggle="tab"> Your Bookings </a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#yourWishlist" data-toggle="tab"> Your Wishlist</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#changePassword" data-toggle="tab"> Change Password</a>
+					</li>
+				</ul>
+			</div>
+			
+			<div class="col-md-9">
+				<div class ="tab-content">
+				
+					<!-- Your Profile Tab-->
+					<div class="tab-pane active" id="profile" style="height:100%;"> 
+						<h1> Edit Profile </h1>
+						
+						<img src="images/profile/dp2.jpg" class="profile-img">
+						<br>
+						
+						<form>
+							
+							<input type="file" class="border form-control-file" style="width:50%; margin:auto;">
+							<br><br>
+							<div class="input-group">
+								<div class="input-group-prepend">
+									<span class="input-group-text"><i class="fas fa-user"></i></span>
+								</div>							
+								<input type="text" placeholder="Enter first name" class="form-control"> 	
+							</div>
+							<br>
+							<div class="input-group">
+								<div class="input-group-prepend">
+									<span class="input-group-text"><i class="fas fa-user"></i></span>
+								</div>			
+								<input type="text" placeholder="Enter last name" class="form-control"> 
+							</div>
+							<br>
+							<div class="input-group">
+								<div class="input-group-prepend">
+									<span class="input-group-text"><i class="fas fa-envelope"></i></span>
+								</div>
+								<input type="email" placeholder="Enter email" class="form-control"> 	
+							</div>
+							<br>
+							<div class="input-group">
+								<div class="input-group-prepend">
+									<span class="input-group-text"><i class="fas fa-phone"></i></span>
+								</div>
+								<input type="tel" placeholder="Enter phone number" class="form-control"> 	
+							</div>
+							<br>
+							<div class="input-group">
+								<div class="input-group-prepend">
+									<span class="input-group-text"><i class="fas fa-calendar-alt"></i></span>
+								</div>
+								<input type="text" value="Your Birthday : " class="form-control" readonly>
+								<input type="date" class="form-control">
+							</div>
+							<br><br>
+							<input type="submit" class="btn btn-primary" value="Update">
+							
+						</form>
+							
+					</div>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					<!-- Your Bookings Tab -->
+					<div class="tab-pane fade" id="yourBookings">
+						
+						
+						<h1>Your Bookings</h1>			
+						<button class="currentBookingDropDown" type="button" data-toggle="collapse" data-target="#currentBooking">
+						Current Booking <i class="fas fa-caret-down float-right"></i>
+						</button>
+						
+						<div class="collapse show" id="currentBooking">
+							
+								
+								
+								<button class="booking" data-toggle="collapse" data-target="#bookingDetails1">
+										
+										<img class="float-left" src="images/popularLocations/1.jpg">
+										
+										<div class="float-left">
+											Rishikesh Camp
+											<br>
+											<i class="fas fa-thumbtack"></i>&nbsp  Veerabhadra, Rishikesh, Uttarakhand
+											<br>
+											
+										</div>
+										
+										<div class="float-left">
+											Your Rating : &nbsp
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star-half-alt"></span>
+											<br>
+											<a href="#"> Give Your Review</a>
+											<br>
+							
+										</div>
+										
+								</button>
+								
+								<div class="collapse" id="bookingDetails1">
+									<div class="card card-border">
+									<br><Br>
+									<center>
+									<table class="otherDetailsTable"> 
+										<tr>
+											<td>Date Of Booking</td>
+											<td>:</td>
+											<td>12th October 2020</td>
+										</tr>
+										<tr>
+											<td>Check-In</td>
+											<td>:</td>
+											<td>12th May 2021, 12 P.M.</td>
+										</tr>
+										<tr>
+											<td>Check-Out</td>
+											<td>:</td>
+											<td>15th May 2021, 1 P.M.</td>
+										</tr>
+										<tr>
+											<td>No. Of Guests</td>
+											<td>:</td>
+											<td>6</td>
+										</tr>
+									</table>
+									<br><br>
+									<table class="invoiceTable">
+										<tr>
+											<td colspan="4"><h3>Invoice</h3></td>
+										</tr>
+										<tr>
+											<td>Type</td>
+											<td>Price Per Person</td>
+											<td>No. Of People</td>
+											<td>Total Price</td>
+										</tr>
+										<tr>
+											<td>Luxury</td>
+											<td>2000</td>
+											<td>2</td>
+											<td>4000</td>
+										</tr>
+										
+										<tr>
+											<td>Normal</td>
+											<td>1500</td>
+											<td>1</td>
+											<td>1500</td>
+										</tr>
+										<tr>
+											<td>Budget</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+										</tr>
+										<tr>
+											<td colspan="2"></td>
+											<td> Sum : </td>
+											<td>5500</td>		
+										</tr>
+										
+										<tr>
+											<td colspan="4"> &nbsp</td>
+											
+										</tr>
+										
+										<tr>
+											<td colspan="2"></td>
+											<td>Number Of Days</td>
+											<td>4</td>
+										</tr>
+										<tr>
+											<td colspan="2"></td>
+											<td style="font-weight:600; letter-spacing:3px;">Total : </td>
+											<td>4 x 5500 = 22500</td>		
+										</tr>
+										
+									</table>
+								</center>
+								<br><br>
+								</div>
+								</div>
+						</div>
+						
+						
+						
+						
+						
+						<button class="completedTripsDropDown" type="button" data-toggle="collapse" data-target="#completedBooking">
+						Completed Trips <i class="fas fa-caret-down float-right"></i>
+						</button>
+						
+						<div class="collapse" id="completedBooking">
+							
+								<button class="booking" data-toggle="collapse" data-target="#bookingDetails2">
+										
+										<img class="float-left" src="images/popularLocations/2.jpg">
+										
+										<div class="float-left">
+											Rishikesh Camp
+											<br>
+											<i class="fas fa-thumbtack"></i>&nbsp  Veerabhadra, Rishikesh, Uttarakhand
+											<br>
+											
+										</div>
+										
+										<div class="float-left">
+											Your Rating : &nbsp
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star-half-alt"></span>
+											<br>
+											<a href="#"> Give Your Review</a>
+											<br>
+							
+										</div>
+										
+								</button>
+								
+								<div class="collapse" id="bookingDetails2">
+									<div class="card card-border">
+									<br><Br>
+									<center>
+									<table class="otherDetailsTable"> 
+										<tr>
+											<td>Date Of Booking</td>
+											<td>:</td>
+											<td>12th October 2020</td>
+										</tr>
+										<tr>
+											<td>Check-In</td>
+											<td>:</td>
+											<td>12th May 2021, 12 P.M.</td>
+										</tr>
+										<tr>
+											<td>Check-Out</td>
+											<td>:</td>
+											<td>15th May 2021, 1 P.M.</td>
+										</tr>
+										<tr>
+											<td>No. Of Guests</td>
+											<td>:</td>
+											<td>6</td>
+										</tr>
+									</table>
+									<br><br>
+									<table class="invoiceTable">
+										<tr>
+											<td colspan="4"><h3>Invoice</h3></td>
+										</tr>
+										<tr>
+											<td>Type</td>
+											<td>Price Per Person</td>
+											<td>No. Of People</td>
+											<td>Total Price</td>
+										</tr>
+										<tr>
+											<td>Luxury</td>
+											<td>2000</td>
+											<td>2</td>
+											<td>4000</td>
+										</tr>
+										
+										<tr>
+											<td>Normal</td>
+											<td>1500</td>
+											<td>1</td>
+											<td>1500</td>
+										</tr>
+										<tr>
+											<td>Budget</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+										</tr>
+										<tr>
+											<td colspan="2"></td>
+											<td> Sum : </td>
+											<td>5500</td>		
+										</tr>
+										
+										<tr>
+											<td colspan="4"> &nbsp</td>
+											
+										</tr>
+										
+										<tr>
+											<td colspan="2"></td>
+											<td>Number Of Days</td>
+											<td>4</td>
+										</tr>
+										<tr>
+											<td colspan="2"></td>
+											<td style="font-weight:600; letter-spacing:3px;">Total : </td>
+											<td>4 x 5500 = 22500</td>		
+										</tr>
+										
+									</table>
+								</center>
+								<br><br>
+								</div>
+								</div>
+								<button class="booking" data-toggle="collapse" data-target="#bookingDetails3">
+										
+										<img class="float-left" src="images/popularLocations/3.jpg">
+										
+										<div class="float-left">
+											Rishikesh Camp
+											<br>
+											<i class="fas fa-thumbtack"></i>&nbsp  Veerabhadra, Rishikesh, Uttarakhand
+											<br>
+											
+										</div>
+										
+										<div class="float-left">
+											Your Rating : &nbsp
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star-half-alt"></span>
+											<br>
+											<a href="#"> Give Your Review</a>
+											<br>
+							
+										</div>
+										
+								</button>
+								
+								<div class="collapse" id="bookingDetails3">
+									<div class="card card-border">
+									<br><Br>
+									<center>
+									<table class="otherDetailsTable"> 
+										<tr>
+											<td>Date Of Booking</td>
+											<td>:</td>
+											<td>12th October 2020</td>
+										</tr>
+										<tr>
+											<td>Check-In</td>
+											<td>:</td>
+											<td>12th May 2021, 12 P.M.</td>
+										</tr>
+										<tr>
+											<td>Check-Out</td>
+											<td>:</td>
+											<td>15th May 2021, 1 P.M.</td>
+										</tr>
+										<tr>
+											<td>No. Of Guests</td>
+											<td>:</td>
+											<td>6</td>
+										</tr>
+									</table>
+									<br><br>
+									<table class="invoiceTable">
+										<tr>
+											<td colspan="4"><h3>Invoice</h3></td>
+										</tr>
+										<tr>
+											<td>Type</td>
+											<td>Price Per Person</td>
+											<td>No. Of People</td>
+											<td>Total Price</td>
+										</tr>
+										<tr>
+											<td>Luxury</td>
+											<td>2000</td>
+											<td>2</td>
+											<td>4000</td>
+										</tr>
+										
+										<tr>
+											<td>Normal</td>
+											<td>1500</td>
+											<td>1</td>
+											<td>1500</td>
+										</tr>
+										<tr>
+											<td>Budget</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+										</tr>
+										<tr>
+											<td colspan="2"></td>
+											<td> Sum : </td>
+											<td>5500</td>		
+										</tr>
+										
+										<tr>
+											<td colspan="4"> &nbsp</td>
+											
+										</tr>
+										
+										<tr>
+											<td colspan="2"></td>
+											<td>Number Of Days</td>
+											<td>4</td>
+										</tr>
+										<tr>
+											<td colspan="2"></td>
+											<td style="font-weight:600; letter-spacing:3px;">Total : </td>
+											<td>4 x 5500 = 22500</td>		
+										</tr>
+										
+									</table>
+								</center>
+								<br><br>
+								</div>
+								</div>
+								<button class="booking" data-toggle="collapse" data-target="#bookingDetails4">
+										
+										<img class="float-left" src="images/popularLocations/4.jpg">
+										
+										<div class="float-left">
+											Rishikesh Camp
+											<br>
+											<i class="fas fa-thumbtack"></i>&nbsp  Veerabhadra, Rishikesh, Uttarakhand
+											<br>
+											
+										</div>
+										
+										<div class="float-left">
+											Your Rating : &nbsp
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star-half-alt"></span>
+											<br>
+											<a href="#"> Give Your Review</a>
+											<br>
+							
+										</div>
+										
+								</button>
+								
+								<div class="collapse" id="bookingDetails4">
+									<div class="card">
+									<br><Br>
+									<center>
+									<table class="otherDetailsTable"> 
+										<tr>
+											<td>Date Of Booking</td>
+											<td>:</td>
+											<td>12th October 2020</td>
+										</tr>
+										<tr>
+											<td>Check-In</td>
+											<td>:</td>
+											<td>12th May 2021, 12 P.M.</td>
+										</tr>
+										<tr>
+											<td>Check-Out</td>
+											<td>:</td>
+											<td>15th May 2021, 1 P.M.</td>
+										</tr>
+										<tr>
+											<td>No. Of Guests</td>
+											<td>:</td>
+											<td>6</td>
+										</tr>
+									</table>
+									<br><br>
+									<table class="invoiceTable">
+										<tr>
+											<td colspan="4"><h3>Invoice</h3></td>
+										</tr>
+										<tr>
+											<td>Type</td>
+											<td>Price Per Person</td>
+											<td>No. Of People</td>
+											<td>Total Price</td>
+										</tr>
+										<tr>
+											<td>Luxury</td>
+											<td>2000</td>
+											<td>2</td>
+											<td>4000</td>
+										</tr>
+										
+										<tr>
+											<td>Normal</td>
+											<td>1500</td>
+											<td>1</td>
+											<td>1500</td>
+										</tr>
+										<tr>
+											<td>Budget</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+										</tr>
+										<tr>
+											<td colspan="2"></td>
+											<td> Sum : </td>
+											<td>5500</td>		
+										</tr>
+										
+										<tr>
+											<td colspan="4"> &nbsp</td>
+											
+										</tr>
+										
+										<tr>
+											<td colspan="2"></td>
+											<td>Number Of Days</td>
+											<td>4</td>
+										</tr>
+										<tr>
+											<td colspan="2"></td>
+											<td style="font-weight:600; letter-spacing:3px;">Total : </td>
+											<td>4 x 5500 = 22500</td>		
+										</tr>
+										
+									</table>
+								</center>
+								<br><br>
+								</div>
+								</div>
+							</div>
+						
+						
+					
+					
+						
+					</div>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					<!-- Your Wishlist Tab -->
+					<div class="tab-pane fade" id="yourWishlist">
+					
+						<h1>Your Wishlist</h1>
+						<p>Places you really want to camp!</p>
+						<div class="container-fluid">
+							<i class="fas fa-heart"></i> <i class="fas fa-heart"></i> <i class="fas fa-heart"></i> <br><br><br>
+							<div class="row">
+								<div class="col-md-6">
+									<div class="thumbnail">
+										<div class="image">
+											<img src="images/popularLocations/4.jpg" alt="poularLocation4">
+										</div>
+										<div class="description">
+											<table>
+											<tr>
+												<td>Name </td>
+												<td>&nbsp :&nbsp &nbsp</td>
+												<td>The Lodi Camp</td>
+											</tr>
+											<tr>
+												<td>Rating</td>
+												<td>&nbsp :&nbsp &nbsp </td>
+												<td>
+													<span class="fa fa-star"></span>
+													<span class="fa fa-star"></span>
+													<span class="fa fa-star"></span>
+													<span class="fa fa-star"></span>
+													<span class="fa fa-star-o"></span>
+												</td>
+											</tr>
+											
+											</table>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="thumbnail">
+										<div class="image">
+											<img src="images/popularLocations/5.jpg" alt="popularLocation5">
+										</div>
+										<div class="description">
+											<table>
+											<tr>
+												<td>Name </td>
+												<td>&nbsp :&nbsp &nbsp</td>
+												<td>The Lodi Camp</td>
+											</tr>
+											<tr>
+												<td>Rating</td>
+												<td>&nbsp :&nbsp &nbsp </td>
+												<td>
+													<span class="fa fa-star"></span>
+													<span class="fa fa-star"></span>
+													<span class="fa fa-star"></span>
+													<span class="fa fa-star"></span>
+													<span class="fa fa-star-half-full"></span>
+												</td>
+											</tr>
+											
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>	
+							
+							<div class="row">
+								<div class="col-md-6">
+									<div class="thumbnail">
+									
+										<div class="image">
+											<img src="images/popularLocations/6.jpg" alt="popularLocation6">
+										</div>
+										
+										<div class="description">
+											<table>
+											<tr>
+												<td>Name </td>
+												<td>&nbsp :&nbsp &nbsp</td>
+												<td>The Lodi Camp</td>
+											</tr>
+											<tr>
+												<td>Rating</td>
+												<td>&nbsp :&nbsp &nbsp </td>
+												<td>
+													<span class="fa fa-star"></span>
+													<span class="fa fa-star"></span>
+													<span class="fa fa-star"></span>
+													<span class="fa fa-star"></span>
+													<span class="fa fa-star-o"></span>
+												</td>
+											</tr>
+											
+											</table>
+										</div>
+										
+									</div>
+								</div>
+								
+								<div class="col-md-6">
+									<div class="thumbnail">
+										<div class="image">
+											<img src="images/discoverByType/beach1.jpg" alt="one">
+										</div>
+										<div class="description">
+											
+											<table>
+											<tr>
+												<td>Name </td>
+												<td>&nbsp :&nbsp &nbsp</td>
+												<td>The Lodi Camp</td>
+											</tr>
+											<tr>
+												<td>Rating</td>
+												<td>&nbsp :&nbsp &nbsp </td>
+												<td>
+													<span class="fa fa-star"></span>
+													<span class="fa fa-star"></span>
+													<span class="fa fa-star"></span>
+													<span class="fa fa-star"></span>
+													<span class="fa fa-star-half-full"></span>
+												</td>
+											</tr>
+											</table>
+											 
+										</div>
+									</div>
+								</div>
+							</div>
+							
+						</div>
+						<i class="fas fa-heart"></i> <i class="fas fa-heart"></i> <i class="fas fa-heart"></i>
+					</div>
+					
+					<!-- Change Password Tab -->
+					<div class="tab-pane fade" id="changePassword">
+						<h1>Change Password</h1>
+						
+						<div class="row">
+							<div class="col-sm-4">
+								<br><br>
+								<i class="fas fa-unlock-alt fa-5x"></i>
+								<br><br>
+							</div>
+							<div class="col-sm-8" >
+							<form>
+								<div class="input-group">
+									<div class="input-group-prepend">
+										<span class="input-group-text"><i class="fal fa-key"></i></span>
+									</div>							
+									<input type="password" placeholder="Enter current password"   class="form-control"> 	
+								</div>
+								<br>
+								<div class="input-group">
+									<div class="input-group-prepend">
+										<span class="input-group-text"><i class="fal fa-key"></i></span>
+									</div>			
+									<input type="password" placeholder="Enter new password"         class="form-control"> 
+								</div>
+								<br>
+								<div class="input-group">
+									<div class="input-group-prepend">
+										<span class="input-group-text"><i class="fal fa-key"></i></span>
+									</div>
+									<input type="password" placeholder="Enter new password again" class="form-control"> 	
+								</div>
+								<br><Br>
+								<input type="submit" value="Update" class="btn btn-primary">
+								</form>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		
+	</div>
+	
+
+	
+	<!-- Footer start-->
+	
+	<div class="container-fluid">	
+		<footer class="row footer">
+			<div class="col-md-4">
+				<ul>
+					<li><h3>General</h3></li>
+					<hr>
+				</ul>
+				<ul class="list">
+					<li><a href="aboutUs.html">About Us</a></li>
+					<li><a href="contactUs.html">Contact Us</a></li>
+					<li>FAQ's</li>
+					<li>Terms and Conditions</li>
+				</ul>
+				
+			</div>
+			
+			<div class="col-md-4">
+				<ul>
+					<li><h3>Connect</h3></li>
+					<hr>
+				</ul>
+				<ul class="list">
+					<li><i class="fab fa-facebook-square"></i>&nbsp &nbsp Facebook</li>
+					<li><i class="fab fa-twitter-square"></i>&nbsp &nbsp  Twitter</li>
+					<li><i class="fab fa-instagram"></i>&nbsp &nbsp  Instagram</li>
+				</ul>
+				
+			</div>
+			
+			<div class="col-md-4">
+				
+					<center><img src="images/camping_logo.jpg" alt="logo" >
+					<h3>Camping Hub</h3>
+					<p>We hope you liked the website!<br> Please keep visiting us.<br> We will be delighted to help you book for camping!</p>
+					</center>
+			</div>
+		</footer>
+	</div>
+
+</body>
+</html>
